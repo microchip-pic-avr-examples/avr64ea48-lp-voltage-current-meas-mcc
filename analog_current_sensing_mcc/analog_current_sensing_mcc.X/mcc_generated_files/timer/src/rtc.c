@@ -120,7 +120,6 @@ ISR(RTC_CNT_vect)
     RTC.INTFLAGS = (RTC_OVF_bm | RTC_CMP_bm);
 }
 
-
 ISR(RTC_PIT_vect)
 {
    if (RTC_PIT_isr_cb != NULL) 
@@ -129,7 +128,6 @@ ISR(RTC_PIT_vect)
    } 
    RTC.PITINTFLAGS = RTC_PI_bm;
 }
-
 
 inline void RTC_WriteCounter(uint16_t timerVal)
 {

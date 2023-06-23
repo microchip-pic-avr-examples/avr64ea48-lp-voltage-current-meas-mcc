@@ -10,8 +10,9 @@
  * @version MAIN Driver Version 1.0.0
 */
 
+
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -42,12 +43,14 @@
 #define WAKEUP_TIME 10          // Wakeup and sample ADC each 10 seconds
 #define R_SENSE 10000           // Sense resistor value in Ohm
 
+#define USART_ON                // Enable text output to terminal
+
 // functions defined in main.c 
 void PORT_initialize(void);
 void ADC0_measure(void);
 void USART1_send_string(const char *strptr);
 void reverse_string(char* str, uint8_t len);
-uint8_t int_to_string(uint8_t x, char str[], uint8_t d);
+uint8_t int_to_string(uint16_t x, char str[], uint8_t d);
 void float_to_string(float n, char* res, uint8_t decimals);
 void pit_int_function(void);
 
@@ -111,7 +114,7 @@ void reverse_string(char* str, uint8_t len)
  *  If d > no. of digits in x, 0s are added to the start of the string
  * 
  */
-uint8_t int_to_string(uint8_t x, char str[], uint8_t d)
+uint8_t int_to_string(uint16_t x, char str[], uint8_t d)
 {
     uint8_t i = 0;
     
@@ -145,7 +148,7 @@ uint8_t int_to_string(uint8_t x, char str[], uint8_t d)
 void float_to_string(float n, char* res, uint8_t decimals)
 {
     // Extract integer part
-    uint8_t ipart = (uint8_t) n;
+    uint16_t ipart = (uint16_t) n;
 
     // Extract floating part
     float fpart = n - (float) ipart;
@@ -166,7 +169,7 @@ void float_to_string(float n, char* res, uint8_t decimals)
         // Get the value of fraction part up to given no. of points after dot.
         // The third parameter is needed to handle cases like 233.007
         fpart = fpart * pow(10, decimals);
-        int_to_string((uint8_t) fpart, res + i + 1, decimals);
+        int_to_string((uint16_t) fpart, res + i + 1, decimals);
     }
 }
 
@@ -234,22 +237,25 @@ void ADC0_measure(void)
 
     char res[20];   // string buffer
     
-    //Convert integer x to string str[]
+    //Convert voltage int to string
     float_to_string(measured_voltage, res, 4);
     // Sends the result over uart
+#ifdef USART_ON
     USART1_send_string("Measured Voltage: ");
     USART1_send_string(res);
     USART1_send_string("V\n");
+#endif
 
     //Fixing rounding problems
     measured_current = measured_current + 0.5;
-    //Convert integer x to string str[]
+    //Convert current int to string
     float_to_string(measured_current, res, 4);
-
     // Sends the result over uart
+#ifdef USART_ON
     USART1_send_string("Measured Current: ");
     USART1_send_string(res);
     USART1_send_string("uA\n");
+#endif
 
     // Disables DAC and ADC to save power
     ADC0_Disable();
@@ -277,35 +283,39 @@ void pit_int_function(void)
 int main(void)
 {
     // initialize all peripherals
-    SYSTEM_Initialize();        
+    SYSTEM_Initialize();
+    cli();      // disable global interrupts
     // disable interrupt and digital buffer on all GPIO pins to save power
     PORT_initialize();
     
+#ifdef USART_ON
     USART1_send_string("Starting...\n");    // Send start message to terminal
+#endif
+        
     timeout = WAKEUP_TIME;                  // Set ADC measure frequency (seconds)
     
     // set PIT interrupts to execute this function
     RTC_SetPITIsrCallback(pit_int_function);
     
+    
     // loop forever here
     while (1)
     {
-        sleep_cpu();                    // go to sleep
+        sei();      // enable global interrupts
+        sleep_cpu();        // go to sleep
 
         if (timeout < 1)                
         {
-            cli();                      // disable global interrupts
+            cli();      // disable global interrupts
             
             LED0_SetDigitalOutput();
-            LED0_SetLow();              // turn on LED0 (active low)
+            LED0_SetLow();      // turn on LED0 (active low)
             
-            ADC0_measure();             // do ADC0 sampling
+            ADC0_measure();     // do ADC0 sampling
             timeout = WAKEUP_TIME;      // Reset timeout counter
             
             LED0_SetDigitalInput();
-            LED0_DisableDigitalInputBuffer();   // turn off LED0, save power
-
-            sei();                      // enable global interrupts
+            LED0_DisableDigitalInputBuffer();       // turn off LED0, save power
         }
     }   
 }

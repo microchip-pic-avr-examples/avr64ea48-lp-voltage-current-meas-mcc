@@ -43,13 +43,13 @@ int8_t RTC_Initialize(void)
     while (RTC.STATUS > 0) { /* Wait for all register to be synchronized */
     }
     //Compare 
-    RTC.CMP = 0x3FF;
+    RTC.CMP = 0x1;
 
     //Count
     RTC.CNT = 0x0;
 
     //Period
-    RTC.PER = 0x7FF;
+    RTC.PER = 0x1;
 
     //Clock selection
     RTC.CLKSEL = 0x1;
@@ -57,8 +57,8 @@ int8_t RTC_Initialize(void)
     // CMP disabled; OVF disabled; 
     RTC.INTCTRL = 0x0;
 
-    // CORREN disabled; PRESCALER RTC Clock / 32; RTCEN enabled; RUNSTDBY disabled; 
-    RTC.CTRLA = 0x29;
+    // CORREN disabled; PRESCALER RTC Clock / 1; RTCEN enabled; RUNSTDBY disabled; 
+    RTC.CTRLA = 0x1;
 
 
         while (RTC.PITSTATUS > 0) { /* Wait for all register to be synchronized */

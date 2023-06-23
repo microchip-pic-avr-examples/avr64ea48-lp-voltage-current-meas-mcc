@@ -39,8 +39,8 @@ adc_irq_cb_t ADC0_ErrorCallback = NULL;
 
 int8_t ADC0_Initialize(void)
 {     
-    //PRESC System clock divided by 4; 
-    ADC0.CTRLB = 0x1;
+    //PRESC System clock divided by 2; 
+    ADC0.CTRLB = 0x0;
 
     //CHOPPING DISABLE; FREERUN disabled; LEFTADJ disabled; SAMPNUM 16 samples accumulated; 
     ADC0.CTRLF = 0x4;

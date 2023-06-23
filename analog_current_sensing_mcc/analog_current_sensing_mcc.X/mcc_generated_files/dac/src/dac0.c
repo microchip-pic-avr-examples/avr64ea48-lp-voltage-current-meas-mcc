@@ -37,7 +37,7 @@
 int8_t DAC0_Initialize(void)
 {
     // DATA Register 
-	DAC0.DATA = 0x8B80;
+	DAC0.DATA = 0x4D80;
     // ENABLE enabled; OUTRANGE AUTO; OUTEN enabled; RUNSTDBY enabled; 
 	DAC0.CTRLA = 0xC1;
 

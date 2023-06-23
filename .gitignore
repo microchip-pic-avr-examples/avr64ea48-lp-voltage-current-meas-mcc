@@ -4,3 +4,7 @@
 !/**/nbproject/*.xml
 /**/dist/*
 /**/.generated_files/*
+
+# Add this if you are using VS Code
+/**/.vs
+.vscode/*

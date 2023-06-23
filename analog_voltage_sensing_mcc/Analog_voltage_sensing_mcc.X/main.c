@@ -1,17 +1,18 @@
+  
   /*
- * MAIN Generated Driver File
- * 
- * @file main.c
- * 
- * @defgroup main MAIN
- * 
- * @brief This is the generated driver implementation file for the MAIN driver.
- *
- * @version MAIN Driver Version 1.0.0
-*/
+   * MAIN Generated Driver File
+   * 
+   *  @file main.c
+   *  
+   *  @defgroup main MAIN
+   *  
+   *  @brief This is the generated driver implementation file for the MAIN driver.
+   * 
+   *  @version MAIN Driver Version 1.0.0
+   */
 
 /*
-© [2023] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 

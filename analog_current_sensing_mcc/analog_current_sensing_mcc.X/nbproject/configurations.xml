@@ -117,7 +117,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="AVR-Ex_DFP" vendor="Microchip" version="2.2.56"/>
+        <pack name="AVR-Ex_DFP" vendor="Microchip" version="2.4.168"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -253,7 +253,7 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7fff"/>
-        <property key="poweroptions.powerenable" value="false"/>
+        <property key="poweroptions.powerenable" value="true"/>
         <property key="programmerToGoFilePath"
                   value="C:/MPLABXProjects/avr64ea48-lp-voltage-current-meas-mcc/analog-current-sensing-mcc.X/debug/free/analog-current-sensing-mcc_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -270,7 +270,7 @@
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
-        <property key="voltagevalue" value=""/>
+        <property key="voltagevalue" value="3.3"/>
       </Tool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
@@ -321,9 +321,9 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7fff"/>
-        <property key="poweroptions.powerenable" value="false"/>
+        <property key="poweroptions.powerenable" value="true"/>
         <property key="programmerToGoFilePath"
-                  value="C:/MPLABXProjects/avr64ea48-lp-voltage-current-meas-mcc/analog-current-sensing-mcc.X/debug/free/analog-current-sensing-mcc_ptg"/>
+                  value="C:/MPLABXProjects/avr64ea48-lp-voltage-current-meas-mcc/analog_current_sensing_mcc/analog_current_sensing_mcc.X/debug/free/analog_current_sensing_mcc_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -338,7 +338,7 @@
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
-        <property key="voltagevalue" value=""/>
+        <property key="voltagevalue" value="3.3"/>
       </nEdbgTool>
     </conf>
     <conf name="pro" type="2">
@@ -353,7 +353,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="AVR-Ex_DFP" vendor="Microchip" version="2.2.56"/>
+        <pack name="AVR-Ex_DFP" vendor="Microchip" version="2.4.168"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -489,7 +489,7 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7fff"/>
-        <property key="poweroptions.powerenable" value="false"/>
+        <property key="poweroptions.powerenable" value="true"/>
         <property key="programmerToGoFilePath"
                   value="C:/MPLABXProjects/avr64ea48-lp-voltage-current-meas-mcc/analog-current-sensing-mcc.X/debug/pro/analog-current-sensing-mcc_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -506,7 +506,7 @@
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
-        <property key="voltagevalue" value=""/>
+        <property key="voltagevalue" value="3.3"/>
       </Tool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
@@ -557,9 +557,9 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7fff"/>
-        <property key="poweroptions.powerenable" value="false"/>
+        <property key="poweroptions.powerenable" value="true"/>
         <property key="programmerToGoFilePath"
-                  value="C:/MPLABXProjects/avr64ea48-lp-voltage-current-meas-mcc/analog-current-sensing-mcc.X/debug/pro/analog-current-sensing-mcc_ptg"/>
+                  value="C:/MPLABXProjects/avr64ea48-lp-voltage-current-meas-mcc/analog_current_sensing_mcc/analog_current_sensing_mcc.X/debug/pro/analog_current_sensing_mcc_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -574,7 +574,7 @@
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
-        <property key="voltagevalue" value=""/>
+        <property key="voltagevalue" value="3.3"/>
       </nEdbgTool>
     </conf>
   </confs>
