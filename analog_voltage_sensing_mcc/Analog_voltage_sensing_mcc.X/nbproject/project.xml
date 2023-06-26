@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>analog-voltage-sensing-mcc</name>
+            <name>analog_voltage_sensing_mcc</name>
             <creation-uuid>41a377d1-e721-4a26-874a-3aecd916fcd1</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>

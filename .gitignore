@@ -1,9 +1,10 @@
 # Untracked files in MPLABX projects
+/**/.generated_files/*
 /**/build/*
+/**/debug/*
+/**/dist/*
 /**/nbproject/*
 !/**/nbproject/*.xml
-/**/dist/*
-/**/.generated_files/*
 
 # Add this if you are using VS Code
 /**/.vs

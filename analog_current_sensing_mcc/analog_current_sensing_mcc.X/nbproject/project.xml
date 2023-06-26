@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>analog-current-sensing-mcc</name>
+            <name>analog_current_sensing_mcc</name>
             <creation-uuid>a94d865c-bdca-4ac8-b370-aab71c26f4fe</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>

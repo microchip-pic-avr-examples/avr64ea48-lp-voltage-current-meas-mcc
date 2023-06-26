@@ -313,7 +313,7 @@
         <property key="memories.programmemory.ranges" value="0-7fff"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmerToGoFilePath"
-                  value="C:/MPLABXProjects/avr64ea48-lp-voltage-current-meas-mcc/analog-voltage-sensing-mcc.X/debug/free/analog-voltage-sensing-mcc_ptg"/>
+                  value="C:/GIT/AVR EA/EBE - 8-bit Examples/avr64ea48-lp-voltage-current-meas-mcc/analog_voltage_sensing_mcc/Analog_voltage_sensing_mcc.X/debug/free/Analog_voltage_sensing_mcc_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -547,7 +547,7 @@
         <property key="memories.programmemory.ranges" value="0-7fff"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmerToGoFilePath"
-                  value="C:/MPLABXProjects/avr64ea48-lp-voltage-current-meas-mcc/analog-voltage-sensing-mcc.X/debug/pro/analog-voltage-sensing-mcc_ptg"/>
+                  value="C:/GIT/AVR EA/EBE - 8-bit Examples/avr64ea48-lp-voltage-current-meas-mcc/analog_voltage_sensing_mcc/Analog_voltage_sensing_mcc.X/debug/pro/Analog_voltage_sensing_mcc_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
