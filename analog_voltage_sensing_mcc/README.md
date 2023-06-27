@@ -144,7 +144,7 @@ Finally, add support for sleep functions. The sleep instruction is issued to the
 
 ## Changing Target Voltage on CNANO Board
 
-To run the system clock at 20 MHz, the AVR64EA48 device need a supply voltage above 4.5V. The supply voltage for the microcontroller on the CNANO board is called "Target Voltage", and can be changed by going into the menu setting for the CNANO board using the Project Properties:
+This example uses the maximum allowed main clock frequency (10 MHz) at the default board voltage (3.3V). To use a higher clock frequency, the AVR64EA48 Curiosity Nano board target voltage must be set accordingly (V<sub>DD</sub> > 4.5V, see <i>Electrical Characteristics</i> in the Data Sheet). The supply voltage for the microcontroller on the CNANO board is called "Target Voltage", and can be changed by going into the menu setting for the CNANO board using the Project Properties:  
 
 1. Select "PKOB nano"
 2. Select "Power" from the "Option categories" drop-down menu
